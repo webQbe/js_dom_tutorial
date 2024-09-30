@@ -1,4 +1,31 @@
-// getElementbyClassName Selector
+// getElementbyTagName Selector
+
+// get all <li> tags
+var li = document.getElementsByTagName('li');
+console.log(li);
+
+// select one item
+console.log(li[1]);
+
+// change selected item's text
+li[1].textContent = 'Hello 2';
+
+// change selected item's style
+// camel case: fontWeight, backgroundColor
+li[1].style.fontWeight = 'bold'; 
+li[1].style.backgroundColor = 'yellow'; 
+
+// try to change style of all items
+// li.style.backgroundColor = 'f4f4f4'; // ERROR
+
+// loop through items list & apply style to each item
+for(var i = 0; i < li.length; i++){
+    li[i].style.backgroundColor = 'f4f4f4'; 
+} 
+
+
+
+/* // getElementbyClassName Selector
 
 var items = document.getElementsByClassName('list-group-item');
 console.log(items);
@@ -20,12 +47,7 @@ items[1].style.backgroundColor = 'yellow';
 // loop through items list & apply style to each item
 for(var i = 0; i < items.length; i++){
     items[i].style.backgroundColor = 'f4f4f4'; 
-}
-
-
-
-
-
+} */
 
 /* // getElementbyId Selector
 
