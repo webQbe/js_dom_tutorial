@@ -1,4 +1,33 @@
-// getElementbyId Selector
+// getElementbyClassName Selector
+
+var items = document.getElementsByClassName('list-group-item');
+console.log(items);
+
+// select one item
+console.log(items[1]);
+
+// change selected item's text
+items[1].textContent = 'Hello 2';
+
+// change selected item's style
+// camel case: fontWeight, backgroundColor
+items[1].style.fontWeight = 'bold'; 
+items[1].style.backgroundColor = 'yellow'; 
+
+// try to change style of all items
+// items.style.backgroundColor = 'f4f4f4'; // ERROR
+
+// loop through items list & apply style to each item
+for(var i = 0; i < items.length; i++){
+    items[i].style.backgroundColor = 'f4f4f4'; 
+}
+
+
+
+
+
+
+/* // getElementbyId Selector
 
 // console.log(document.getElementById('header-title'));
 
@@ -25,9 +54,7 @@ console.log(headerTitle.innerText); // checks css rules & 123 not displayed
 
 // Add / Change style
 var header = document.getElementById('main-header');
-header.style.borderBottom = 'solid 3px #000';
-
-
+header.style.borderBottom = 'solid 3px #000'; */
 
 /* // Examining Document Object
 
