@@ -1,4 +1,45 @@
-// QuerySelector
+// QuerySelectorAll
+// selects more than one element
+
+// get elements of the same class
+// this returns NodeList
+var titles = document.querySelectorAll('.title');
+console.log(titles);
+
+// change text
+titles[0].textContent = 'Hello';
+
+// apply style to every other list item
+
+// get list items with odd numbers
+var odd = document.querySelectorAll('li:nth-child(odd)')
+
+// get list items with even numbers
+var even = document.querySelectorAll('li:nth-child(even)')
+
+// loop through each list item & apply style
+for(i = 0; i < odd.length; i++){
+
+    odd[i].style.backgroundColor = '#f4f4f4';
+    even[i].style.backgroundColor = '#ccc';
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // QuerySelector
 // only used to select one (first) item
 
 // change header style
@@ -28,17 +69,7 @@ lastItem.style.color = 'blue';
 var secondItem = document.querySelector('.list-group-item:nth-child(2)')
 secondItem.style.color = 'coral';
 
-
-// css psuedo selectors - .list-group-item:nth-child
-
-
-
-
-
-
-
-
-
+// css psuedo selectors - .list-group-item:nth-child */
 
 /* // getElementbyTagName Selector
 
