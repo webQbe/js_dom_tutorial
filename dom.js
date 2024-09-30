@@ -1,4 +1,35 @@
-// Examining Document Object
+// getElementbyId Selector
+
+// console.log(document.getElementById('header-title'));
+
+// put selected element inside a variable
+var headerTitle = document.getElementById('header-title');
+console.log(headerTitle);
+
+// change selected element's text
+//headerTitle.textContent = 'Hello';
+//headerTitle.innerText = 'Goodbye';
+
+
+// <h1 id="header-title">Item Lister <span style="display: none;">123</span></h1>
+
+// textContent
+console.log(headerTitle.textContent); // ignores css rules & displays 123
+
+// innerText
+console.log(headerTitle.innerText); // checks css rules & 123 not displayed
+
+
+// Add HTML
+// headerTitle.innerHTML = '<h3>Hello</h3>'; 
+
+// Add / Change style
+var header = document.getElementById('main-header');
+header.style.borderBottom = 'solid 3px #000';
+
+
+
+/* // Examining Document Object
 
 // show properties and methods attached to Document Object
 // console.dir(document);
@@ -43,4 +74,4 @@ console.log(document.links);
 console.log(document.forms[0]);
 
 // select first element
-console.log(document.images);
+console.log(document.images); */
