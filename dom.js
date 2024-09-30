@@ -1,4 +1,46 @@
-// getElementbyTagName Selector
+// QuerySelector
+// only used to select one (first) item
+
+// change header style
+var header = document.querySelector('#main-header');
+header.style.borderBottom = 'solid 4px #ccc';
+
+// add value to input
+var input = document.querySelector('input') // gets first input tag
+input.value = 'Hello World';
+
+// select element by attribute
+var submit = document.querySelector('input[type="submit"]');
+submit.value = 'SEND';
+
+
+// apply style to list items
+
+// apply style to first item
+var item = document.querySelector('.list-group-item');
+item.style.color = 'red'; 
+
+// apply style to last item
+var lastItem = document.querySelector('.list-group-item:last-child')
+lastItem.style.color = 'blue';
+
+// apply style to 2nd item
+var secondItem = document.querySelector('.list-group-item:nth-child(2)')
+secondItem.style.color = 'coral';
+
+
+// css psuedo selectors - .list-group-item:nth-child
+
+
+
+
+
+
+
+
+
+
+/* // getElementbyTagName Selector
 
 // get all <li> tags
 var li = document.getElementsByTagName('li');
@@ -21,9 +63,7 @@ li[1].style.backgroundColor = 'yellow';
 // loop through items list & apply style to each item
 for(var i = 0; i < li.length; i++){
     li[i].style.backgroundColor = 'f4f4f4'; 
-} 
-
-
+}  */
 
 /* // getElementbyClassName Selector
 
