@@ -1,4 +1,32 @@
-// Keyboard & Input Events
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // Keyboard & Input Events
 
 var itemInput = document.querySelector('input[type="text"]');
 var form = document.querySelector('form');
@@ -48,33 +76,7 @@ itemInput.addEventListener('input', runEvent);
 //itemInput.addEventListener('keyup', runEvent);
 
 // keypress
-//itemInput.addEventListener('keypress', runEvent);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//itemInput.addEventListener('keypress', runEvent);*/
 
 /* // Mouse Events
 
