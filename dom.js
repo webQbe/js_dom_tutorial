@@ -1,7 +1,32 @@
 // Traversing DOM
 // parents, childs and siblings
 
-// childNodes
+// Siblings
+
+var itemList = document.querySelector('#items');
+
+// nextSibling
+// get same level next element
+// Cons: this also retuns line breaks (#text "\n) of the list
+console.log(itemList.nextSibling);
+
+// nextElementSibling
+console.log(itemList.nextElementSibling);
+
+// previousSibling
+// get same level previous element
+// Cons: this also retuns line breaks (#text "\n) of the list
+console.log(itemList.nextSibling);
+
+// previousElementSibling
+console.log(itemList.previousElementSibling);
+
+// style previousElementSibling
+itemList.previousElementSibling.style.color = 'green';
+
+
+
+/* // childNodes
 
 var itemList = document.querySelector('#items');
 
@@ -41,10 +66,7 @@ console.log(itemList.lastChild);
 console.log(itemList.lastElementChild);
 
 // change lastElementChild text
-itemList.lastElementChild.textContent = "Hello 4";
-
-
-
+itemList.lastElementChild.textContent = "Hello 4"; */
 
 /* // parentNode
 
