@@ -1,4 +1,82 @@
-// Mouse Events
+// Keyboard & Input Events
+
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+var select = document.querySelector('select');
+
+
+function runEvent(e){
+
+    e.preventDefault(); // halt form submission to display event type
+
+    // print event type
+    console.log('Event Type: ' + e.type);
+
+    // show what's typing
+    console.log(e.target.value);
+    document.getElementById('output').innerHTML = "<h3>" +e.target.value + "</h3>";
+
+}
+
+// EVENTS //
+
+// submit
+form.addEventListener('submit', runEvent);
+
+// change (select a value)
+select.addEventListener('change', runEvent);
+
+// input (add, edit, delete values inside input element)
+itemInput.addEventListener('input', runEvent);
+
+// cut (text cut from input element)
+//itemInput.addEventListener('cut', runEvent);
+
+// paste (text pasted to input element)
+//itemInput.addEventListener('paste', runEvent);
+
+// focus (clicked on input element)
+//itemInput.addEventListener('focus', runEvent);
+
+// blur (clicked on input element, then clicked outside)
+//itemInput.addEventListener('blur', runEvent);
+
+// keydown (press a key)
+//itemInput.addEventListener('keydown', runEvent);
+
+// keyup (release a key)
+//itemInput.addEventListener('keyup', runEvent);
+
+// keypress
+//itemInput.addEventListener('keypress', runEvent);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // Mouse Events
 
 var button = document.getElementById('button');
 var box = document.getElementById('box');
@@ -16,8 +94,6 @@ function runEvent(e){
     // change body bg color with mouse position
     document.body.style.backgroundColor = "rgb(" + e.offsetX + "," + e.offsetY + ", 40)";
 }
-
-
 
 // mousemove
 box.addEventListener('mousemove', runEvent);
@@ -47,29 +123,7 @@ box.addEventListener('mouseout', runEvent);
 // button.addEventListener('mousedown', runEvent);
 
 // mouseup
-// button.addEventListener('mouseup', runEvent);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// button.addEventListener('mouseup', runEvent); */
 
 /* // Button Click Events
 
