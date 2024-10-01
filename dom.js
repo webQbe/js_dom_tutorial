@@ -1,4 +1,23 @@
-// QuerySelectorAll
+// Traversing DOM
+// parents, childs and siblings
+
+// parentNode
+
+var itemList = document.querySelector('#items');
+
+// get the parent node of itemList
+// ul#items is inside div#main
+console.log(itemList.parentNode);
+
+// style parentNode
+itemList.parentNode.style.backgroundColor = '#f4f4f4';
+
+// get parent of parentNode
+console.log(itemList.parentNode.parentNode);
+console.log(itemList.parentNode.parentNode.parentNode);
+
+
+/* // QuerySelectorAll
 // selects more than one element
 
 // get elements of the same class
@@ -23,21 +42,7 @@ for(i = 0; i < odd.length; i++){
     odd[i].style.backgroundColor = '#f4f4f4';
     even[i].style.backgroundColor = '#ccc';
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 /* // QuerySelector
 // only used to select one (first) item
