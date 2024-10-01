@@ -1,4 +1,76 @@
-// Creating Elements
+// Events
+
+// Button Click Events
+
+// log message when button is clicked
+
+// <button onclick="buttonClick(1)">
+// function buttonClick(){
+//    console.log('Button Clicked!');
+// }
+
+// using a selector and addEventListener()
+// var button = document.getElementById('button').addEventListener('click', function(){
+//    console.log('123');
+// });
+
+// calling existing function
+var button = document.getElementById('button').addEventListener('click', buttonClick);
+
+// modify element properties with DOM
+//function buttonClick(){
+//    console.log('Button Clicked!');
+//    document.getElementById('header-title').textContent = 'Changed';
+//    document.getElementById('main').style.backgroundColor = '#f4f4f4';
+//}
+
+// log an event
+function buttonClick(e){
+    // console.log(e);
+
+    // get element clicked
+    // console.log(e.target);
+
+    // get target's id
+    console.log(e.target.id);
+
+    // get target's class
+    console.log(e.target.className);
+
+    // get target's class list
+    console.log(e.target.classList); 
+
+    // output to DOM
+    var output = document.getElementById('output');
+    output.innerHTML = '<h3>' + e.target.id + '</h3>';
+
+    // show type of event
+    console.log(e.type);
+
+    // mouse positon x of window
+    console.log('mouse positon x: ' + e.clientX);
+
+    // mouse positon y of window
+    console.log('mouse positon y: ' + e.clientY);
+
+    // get mouse position x of button
+    console.log(e.offsetX);
+
+    // get mouse position y of button
+    console.log(e.offsetY);
+
+    // check if Alt key is pressed
+    console.log(e.altKey);
+
+    // check if Ctrl key is pressed
+    console.log(e.ctrlKey);
+
+    // check if Shift key is pressed
+    console.log(e.shiftKey);
+}
+
+
+/* // Creating Elements
 
 // createElement
 
@@ -38,9 +110,7 @@ var h1 = document.querySelector('header h1');
 container.insertBefore(newDiv, h1);
 
 // style newDiv
-newDiv.style.fontSize = '30px';
-
-
+newDiv.style.fontSize = '30px'; */
 
 /* // Traversing DOM
 // parents, childs and siblings
