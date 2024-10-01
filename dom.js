@@ -1,4 +1,48 @@
-// Traversing DOM
+// Creating Elements
+
+// createElement
+
+// create a div
+var newDiv = document.createElement('div');
+console.log(newDiv);
+
+
+// add a class to div
+newDiv.className = 'hello';
+
+// add an id
+newDiv.id = 'hello1';
+
+// add attribute 
+// with setAttribute(attr name, value)
+newDiv.setAttribute('title', 'Hello Div');
+
+// Create a text node
+var newDivText = document.createTextNode('Hello World!');
+
+// Add newDivText to newDiv
+newDiv.appendChild(newDivText);
+
+
+
+// Add newDiv to DOM(page)
+
+// select container class inside header
+var container = document.querySelector('header .container');
+
+// select h1 inside header
+var h1 = document.querySelector('header h1');
+
+// insert newDiv
+// insertBefore(element to be inseted, before which element)
+container.insertBefore(newDiv, h1);
+
+// style newDiv
+newDiv.style.fontSize = '30px';
+
+
+
+/* // Traversing DOM
 // parents, childs and siblings
 
 // Siblings
@@ -23,8 +67,7 @@ console.log(itemList.previousElementSibling);
 
 // style previousElementSibling
 itemList.previousElementSibling.style.color = 'green';
-
-
+ */
 
 /* // childNodes
 
