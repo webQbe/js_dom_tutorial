@@ -1,7 +1,52 @@
 // Traversing DOM
 // parents, childs and siblings
 
-// parentNode
+// childNodes
+
+var itemList = document.querySelector('#items');
+
+// get child nodes
+// Cons: this also retuns line breaks (#text "\n) of the list
+console.log(itemList.childNodes);
+
+// children
+console.log(itemList.children);
+
+// access specific child
+console.log(itemList.children[1]);
+
+// style a child
+itemList.children[1].style.backgroundColor = 'yellow';
+
+
+// firstChild
+// Cons: this also retuns line breaks (#text "\n) of the list
+console.log(itemList.firstChild);
+
+
+// firstElementChild
+// this returns actual elements
+console.log(itemList.firstElementChild);
+
+// change firstElementChild text
+itemList.firstElementChild.textContent = "Hello 1";
+
+
+// lastChild
+// Cons: this also retuns line breaks (#text "\n) of the list
+console.log(itemList.lastChild);
+
+// lastElementChild
+// this returns actual elements
+console.log(itemList.lastElementChild);
+
+// change lastElementChild text
+itemList.lastElementChild.textContent = "Hello 4";
+
+
+
+
+/* // parentNode
 
 var itemList = document.querySelector('#items');
 
@@ -16,6 +61,9 @@ itemList.parentNode.style.backgroundColor = '#f4f4f4';
 console.log(itemList.parentNode.parentNode);
 console.log(itemList.parentNode.parentNode.parentNode);
 
+// you can also use parentElement instead of parentNode
+
+*/
 
 /* // QuerySelectorAll
 // selects more than one element
