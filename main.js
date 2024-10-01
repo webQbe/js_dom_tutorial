@@ -6,6 +6,10 @@ var itemList = document.getElementById('items');
 // add items to list
 form.addEventListener('submit', addItem);
 
+// delete items from list
+itemList.addEventListener('click', removeItem);
+
+
 
 // Add item
 function addItem(e){
@@ -37,3 +41,23 @@ function addItem(e){
 
 }
 
+// Remove item
+function removeItem(e){
+
+    // check if only delete button is clicked
+    if(e.target.classList.contains('delete')){
+
+        // show confirm box
+        if(confirm('Are you sure?')){
+
+            // get element to be deleted
+            var li = e.target.parentElement;
+
+            // delete
+            itemList.removeChild(li);
+
+        }
+
+    }
+
+}
