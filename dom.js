@@ -1,6 +1,77 @@
-// Events
+// Mouse Events
 
-// Button Click Events
+var button = document.getElementById('button');
+var box = document.getElementById('box');
+
+function runEvent(e){
+    // print event type
+    console.log('Event Type: ' + e.type);
+
+    // output mouse position inside div#output
+    output.innerHTML = '<h3>Mouse X: '+e.offsetX+'</h3><br><h3>Mouse Y: '+e.offsetY+'</h3>';
+
+    // change #box bg color with mouse position
+    //box.style.backgroundColor = "rgb(" + e.offsetX + "," + e.offsetY + ", 40)";
+
+    // change body bg color with mouse position
+    document.body.style.backgroundColor = "rgb(" + e.offsetX + "," + e.offsetY + ", 40)";
+}
+
+
+
+// mousemove
+box.addEventListener('mousemove', runEvent);
+
+// mouseenter
+// checks parent element 
+box.addEventListener('mouseenter', runEvent);
+
+// mouseover
+// checks inner elements
+box.addEventListener('mouseover', runEvent);
+
+// mouseleave
+// checks parent element 
+box.addEventListener('mouseleave', runEvent);
+
+// mouseout 
+// used for inner elements
+box.addEventListener('mouseout', runEvent);
+
+//button.addEventListener('click', runEvent);
+
+// double click
+// button.addEventListener('dblclick', runEvent);
+
+// mousedown
+// button.addEventListener('mousedown', runEvent);
+
+// mouseup
+// button.addEventListener('mouseup', runEvent);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // Button Click Events
 
 // log message when button is clicked
 
@@ -67,8 +138,7 @@ function buttonClick(e){
 
     // check if Shift key is pressed
     console.log(e.shiftKey);
-}
-
+} */
 
 /* // Creating Elements
 
